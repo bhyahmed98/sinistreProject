@@ -25,8 +25,8 @@ public class ContratService {
 		return contratRepository.getOne(id);
 	}
 
-	public void addContrat(Contrat contrat) {
-		contratRepository.save(contrat);
+	public Contrat addContrat(Contrat contrat) {
+		 return contratRepository.save(contrat);
 	}
 
 	public void deleteContrat(Long id) {
