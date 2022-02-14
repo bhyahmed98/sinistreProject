@@ -1,0 +1,28 @@
+
+<button mat-flat-button color="primary" (click)="goToHomeage()">Back !!!</button>
+
+<h2>Add new Sinistre :</h2>
+<p>Please compleate this text form!</p>
+
+
+
+<mat-form-field>
+    <mat-label>date de l'Accident</mat-label>
+<input matInput required [(ngModel)]="date_accidant" >
+<mat-hint>exp.: 14/O5/2021</mat-hint>
+</mat-form-field>
+
+
+<mat-form-field>
+    <mat-label>date de création</mat-label>
+<input matInput required [(ngModel)]="date_creation" >
+<mat-hint>exp.: 15/O5/2021</mat-hint>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>status</mat-label>
+<input matInput required [(ngModel)]="status" >
+<mat-hint>exp.: (Ouvert, Expertise, Termine)</mat-hint>
+</mat-form-field>
+<br>    
+<button mat-flat-button color="primary" (click)="addSinistre()">Next !!!</button>

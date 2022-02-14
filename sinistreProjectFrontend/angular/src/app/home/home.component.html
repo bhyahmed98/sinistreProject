@@ -1,0 +1,66 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="all">
+
+    <h2>Sinistres</h2>
+
+    <div class="example-button-row">
+        <button mat-flat-button color="primary" (click)="goToAddPage()">Add new one !!!</button>
+    </div>
+
+    
+
+
+
+
+<table mat-table [dataSource]="listSinistre" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="demo-position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.numeroSinistre}} </td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="demo-name">
+      <th mat-header-cell *matHeaderCellDef> Date Of accident </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateAccident}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="demo-weight">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.statut}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="demo-symbol">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element"> 
+          <button mat-flat-button color="primary">Read</button>
+          <button mat-flat-button color="accent">Edit</button>
+          <button mat-flat-button color="warn" (click)="deletSinistre(element.numeroSinistre)">Delete</button>
+      </td>
+      
+
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+ 
+  
+</div>
